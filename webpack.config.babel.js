@@ -1,4 +1,5 @@
 const {resolve} = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 /*
 same as above ------>  const resolve = require('path').resolve
  */
@@ -18,6 +19,10 @@ module.exports = evn => {
           }
         }
       ]
-    }
+    },
+    plugins: [ new HtmlWebpackPlugin({
+      title: 'Assiant App',
+      entry: 'src/index.html'
+    }) ]
   }
 }
