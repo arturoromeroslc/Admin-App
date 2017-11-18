@@ -1,5 +1,5 @@
 {
-  "name": "collab-with-atom",
+  "name": "Admin-App",
   "version": "1.0.0",
   "description": "New project with Webpack",
   "main": "index.js",
@@ -31,12 +31,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/arturoromeroslc/Collab-with-Atom.git"
+    "url": "git+https://github.com/arturoromeroslc/Admin-App.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/arturoromeroslc/Collab-with-Atom/issues"
+    "url": "https://github.com/arturoromeroslc/Admin-App/issues"
   },
-  "homepage": "https://github.com/arturoromeroslc/Collab-with-Atom#readme"
+  "homepage": "https://github.com/arturoromeroslc/Admin-App#readme"
 }
