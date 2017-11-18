@@ -1,0 +1,24 @@
+{
+  "name": "collab-with-atom",
+  "version": "1.0.0",
+  "description": "New project with Webpack",
+  "main": "index.js",
+  "dependencies": {
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arturoromeroslc/Collab-with-Atom.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arturoromeroslc/Collab-with-Atom/issues"
+  },
+  "homepage": "https://github.com/arturoromeroslc/Collab-with-Atom#readme"
+}
