@@ -9,5 +9,10 @@ module.exports = evn => {
       path: resolve(__dirname, 'dist'),
       filename: 'bundle.js'
     },
+    modules: {
+      rules: [
+        {test: /\.js$/, use: 'bable-loader'} 
+      ]
+    }
   }
 }
