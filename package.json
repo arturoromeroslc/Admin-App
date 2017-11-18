@@ -4,7 +4,8 @@
   "description": "New project with Webpack",
   "main": "index.js",
   "dependencies": {
-    "react": "^16.1.1"
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
