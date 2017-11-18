@@ -1,5 +1,8 @@
 {
-  "plugins": ["es2015", "react"],
+  "plugins": [
+    ["es2015", {"modules": false}],
+    "react"
+  ],
   "ignore": [
     "./node_modules",
   ]
