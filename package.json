@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "New project with Webpack",
   "main": "index.js",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
-      "webpack": "^3.8.1",
-      "webpack-dev-server": "^2.9.4"
+    "babel-core": "^6.26.0",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
