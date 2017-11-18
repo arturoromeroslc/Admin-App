@@ -23,6 +23,6 @@ module.exports = evn => {
     plugins: [ new HtmlWebpackPlugin({
       title: 'Assiant App',
       entry: 'src/index.html'
-    }) ]
+    })]
   }
 }
