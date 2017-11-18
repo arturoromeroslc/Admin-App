@@ -20,9 +20,12 @@ module.exports = evn => {
         }
       ]
     },
-    plugins: [ new HtmlWebpackPlugin({
-      title: 'Assiant App',
-      entry: 'src/index.html'
-    })]
+    plugins: [
+      new HtmlWebpackPlugin({
+        title: 'Assiant App',
+        template: './src/index.html',
+        cache: false
+      })
+    ]
   }
 }
