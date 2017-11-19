@@ -1,2 +1,2 @@
-# Collab-with-Atom
-New project with Webpack
+# Admin Application for Developers
+A collaboration with JR Meunrath
