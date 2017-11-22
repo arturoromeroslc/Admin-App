@@ -1,9 +1,8 @@
 import React from 'react';
 import { hydrate } from 'react-dom';
+import Root from './Root';
 
 hydrate(
-  <div>
-    <h1>hello world</h1>
-  </div>,
+  <Root />,
   document.getElementById('app'),
 );
