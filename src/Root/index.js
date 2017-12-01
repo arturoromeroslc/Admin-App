@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   HashRouter,
-  Route
+  Route,
 } from 'react-router-dom';
 import Layout from '../Layout';
 import { routes } from '../routes';
@@ -9,7 +9,7 @@ import { routes } from '../routes';
 const Root = () => (
   <HashRouter>
     <Layout>
-      {routes.map((route, index) => <Route key={`${route.path}-${index}`} {...route} />)}
+      {routes.map(route => <Route key={route.path} {...route} />)}
     </Layout>
   </HashRouter>
 );

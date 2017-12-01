@@ -8,16 +8,16 @@ export default function Button(props) {
       {props.title}
     </button>
   );
-};
+}
 
 Button.defaultProps = {
   title: 'Button Text',
   buttonClass: '',
-  buttonType: 'btn-primary'
+  buttonType: 'btn-primary',
 };
 
 Button.propTypes = {
   title: PropTypes.string,
   buttonClass: PropTypes.string,
-  buttonType: PropTypes.string
+  buttonType: PropTypes.string,
 };
