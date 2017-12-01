@@ -1,7 +1,8 @@
 import React from 'react';
+import './styles.less';
 
 const Home = () => (
-  <div>
+  <div className="home-page">
     <h1>Home Page</h1>
   </div>
 );
