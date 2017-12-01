@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  NavLink
+  NavLink,
 } from 'react-router-dom';
 import { appRoutes } from '../../routes';
 import Button from '../../Components/Buttons';
@@ -15,11 +15,10 @@ export default function Header() {
         </div>
         <div className="navigation">
           <ul className="menu">
-            {appRoutes.map((route, index) =>
-              <li className="menu-item" key={`${route.pageType}-${index}`}>
+            {appRoutes.map(route => (
+              <li className="menu-item" key={route.pageType}>
                 <NavLink to={route.path}>{route.pageType}</NavLink>
-              </li>
-            )}
+              </li>))}
           </ul>
         </div>
         <div className="cta-container">

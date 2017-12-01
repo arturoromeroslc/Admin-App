@@ -4,22 +4,22 @@ import About from '../Pages/About';
 export const appRoutes = [
   {
     path: '/',
-    pageType: 'Home'
+    pageType: 'Home',
   },
   {
     path: '/about',
-    pageType: 'About'
-  }
+    pageType: 'About',
+  },
 ];
 
 export const routes = [
   {
     path: '/',
     exact: true,
-    component: Home
+    component: Home,
   },
   {
     path: '/about',
-    component: About
-  }
+    component: About,
+  },
 ];
