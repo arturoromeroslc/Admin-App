@@ -1,32 +1,17 @@
 import React from 'react';
 import {
-  BrowserRouter,
-  Route,
-  Switch
+  HashRouter,
+  Route
 } from 'react-router-dom';
 import Layout from '../Layout';
-import routes from '../routes';
+import { routes } from '../routes';
 
 const Root = () => (
-  <div>
-    <div>
-      <h1>Header</h1>
-      <ul>
-        <li><a href='/'>Home</a></li>
-        <li><a href='/about'>About</a></li>
-      </ul>
-    </div>
+  <HashRouter>
     <Layout>
-      <BrowserRouter>
-        <Switch>
-          { routes.map((route, i) => <Route key={i} {...route} />) }
-        </Switch>
-      </BrowserRouter>
+      {routes.map((route, index) => <Route key={`${route.path}-${index}`} {...route} />)}
     </Layout>
-    <div>
-      <h4>Footer</h4>
-    </div>
-  </div>
+  </HashRouter>
 );
 
 export default Root;

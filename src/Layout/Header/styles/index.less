@@ -1,0 +1,39 @@
+@import '../../../assets/styles/global.less';
+
+.main-header {
+  border-bottom: 1px solid #E2E8ED;
+  padding: 10px;
+  height: 70px;
+
+  .header-container {
+    display: flex;
+    flex-direction: row;
+    height: inherit;
+
+    .branding {
+      width: 30%;
+      margin: auto 0;
+      h1 { font-size: 24px; }
+    }
+
+    .navigation {
+      height: inherit;
+      width: 50%;
+
+      .menu {
+        display: flex;
+        height: inherit;
+        margin: 0;
+        .menu-item {
+          margin: auto 0;
+          width: 18%;
+        }
+      }
+    }
+
+    .cta-container {
+      width: 20%;
+      margin: auto 0;
+    }
+  }
+}

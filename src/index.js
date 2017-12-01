@@ -1,8 +1,8 @@
 import React from 'react';
-import { hydrate } from 'react-dom';
+import { render } from 'react-dom';
 import Root from './Root';
 
-hydrate(
+render(
   <Root />,
   document.getElementById('app'),
 );

@@ -1,7 +1,18 @@
 import Home from '../Pages/Home';
 import About from '../Pages/About';
 
-const routes = [
+export const appRoutes = [
+  {
+    path: '/',
+    pageType: 'Home'
+  },
+  {
+    path: '/about',
+    pageType: 'About'
+  }
+];
+
+export const routes = [
   {
     path: '/',
     exact: true,
@@ -12,5 +23,3 @@ const routes = [
     component: About
   }
 ];
-
-export default routes;
