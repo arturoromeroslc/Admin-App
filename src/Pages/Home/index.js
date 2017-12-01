@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles.less';
+import './styles/index.less';
 
 const Home = () => (
   <div className="home-page">

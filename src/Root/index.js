@@ -4,7 +4,7 @@ import {
   Route
 } from 'react-router-dom';
 import Layout from '../Layout';
-import routes from '../routes';
+import { routes } from '../routes';
 
 const Root = () => (
   <HashRouter>
