@@ -2,7 +2,7 @@ const { resolve } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const extractLess = new ExtractTextPlugin({
-    filename: "dist/public/css/master.css",
+    filename: "css/master.css",
     disable: process.env.NODE_ENV === "development"
 });
 const autoprefixer = require("autoprefixer");
@@ -19,9 +19,17 @@ module.exports = evn => {
     module: {
       rules: [
         {
+          test: [/\.svg$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
+          loader: "file-loader",
+          options: {
+            name: "images/[name].[ext]",
+            publicPath: "/dist/"
+          }
+        },
+        {
           test: /\.js$/,
           use: {
-            loader: 'babel-loader'
+            loader: "babel-loader"
           }
         },
         {
@@ -48,8 +56,8 @@ module.exports = evn => {
     plugins: [
       extractLess,
       new HtmlWebpackPlugin({
-        title: 'Assiant App',
-        template: './src/index.html',
+        title: "Assiant App",
+        template: "./src/index.html",
         cache: false
       })
     ]

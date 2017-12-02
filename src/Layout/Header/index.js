@@ -26,6 +26,9 @@ export default function Header() {
             title="Sign up now"
             buttonType="btn-signup"
           />
+          <Button
+            title="Log in"
+          />
         </div>
       </div>
     </div>

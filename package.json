@@ -4,10 +4,10 @@
   "description": "New project with Webpack",
   "main": "index.js",
   "dependencies": {
+    "prop-types": "^15.6.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
-    "react-router-dom": "^4.2.2",
-    "prop-types": "^15.6.0"
+    "react-router-dom": "^4.2.2"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.6",
@@ -25,7 +25,9 @@
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.4.0",
     "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.5",
     "html-webpack-plugin": "^2.30.1",
+    "image-webpack-loader": "^3.4.2",
     "less": "^2.7.3",
     "less-loader": "^4.0.5",
     "postcss-loader": "^2.0.9",
@@ -37,7 +39,7 @@
     "build": "webpack",
     "build:watch": "webpack --watch",
     "start": "webpack-dev-server --open",
-    "dev": "concurrently \"yarn start\" \"yarn build:watch\" ",
+    "dev": "concurrently \"yarn start\" \"yarn lint\" \"yarn build:watch\" ",
     "lint": "eslint ./src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

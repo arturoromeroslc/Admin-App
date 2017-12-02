@@ -2,8 +2,9 @@
 
 .btn {
   border-radius: 3px;
-  padding: 10px 40px;
   font-size: 14px;
+  padding: 10px 40px;
+  margin: 0 8px;
   cursor: pointer;
 
   &:hover, &:active, &:focus {
@@ -25,5 +26,10 @@
     background: @button-primary-color;
     color: @button-primary-color-font;
     border: 1px solid @border-color-main;
+    transition: 0.5s;
+    &:hover {
+      background: @button-primary-dark-color;
+      transition: 0.4s;
+    }
   }
 }
