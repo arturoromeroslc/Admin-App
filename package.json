@@ -4,15 +4,16 @@
   "description": "New project with Webpack",
   "main": "index.js",
   "dependencies": {
-    "prop-types": "^15.6.1",
+    "deep-get-set": "^1.1.0",
+    "prop-types": "^15.6.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
     "redux": "^4.0.0",
-    "redux-thunk": "^2.2.0",
-    "reselect": "^3.0.1",
     "redux-devtools-extension": "^2.13.2",
+    "redux-thunk": "^2.2.0",
+    "reselect": "^3.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.6",
@@ -38,7 +39,7 @@
     "postcss-loader": "^2.0.9",
     "style-loader": "^0.19.0",
     "webpack": "^3.8.1",
-    "webpack-dev-server": "^2.9.4",
+    "webpack-dev-server": "^2.9.4"
   },
   "scripts": {
     "build": "webpack",

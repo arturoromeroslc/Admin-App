@@ -4,8 +4,11 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import {
-    onLoadFooterLinks
+  onLoadFooterLinks,
 } from './actions';
+import {
+  getFooterLinks,
+} from './reducer';
 import './styles/index.less';
 
 class Footer extends Component {
@@ -14,60 +17,52 @@ class Footer extends Component {
   }
 
   render() {
-      return (
-        <div className="main-footer">
-          <div className="container">
-            <div className="footer-navigation">
-              <ul className="footer-menu">
-                <li className="menu-item">
-                  <h4>Links</h4>
+    return (
+      <div className="main-footer">
+        <div className="container">
+          <div className="footer-navigation">
+            <ul className="footer-menu">
+              {!!this.props.footerLinks && this.props.footerLinks.map(link => (
+                <li
+                  key={link.title}
+                  className="menu-item"
+                >
+                  <h4>{link.title}</h4>
                   <ul className="sub-menu">
-                    <li className="menu-item">github.com</li>
-                    <li className="menu-item">linkedin.com</li>
+                    {link.links.map(linkItem => (
+                      <li
+                        key={linkItem.title}
+                        className="menu-item"
+                      >
+                        {linkItem.title}
+                      </li>
+                    ))}
                   </ul>
                 </li>
-                <li className="menu-item">
-                  <h4>Sponsors</h4>
-                  <ul className="sub-menu">
-                    <li className="menu-item">github.com</li>
-                    <li className="menu-item">linkedin.com</li>
-                  </ul>
-                </li>
-                <li className="menu-item">
-                  <h4>Affiliates</h4>
-                  <ul className="sub-menu">
-                    <li className="menu-item">github.com</li>
-                    <li className="menu-item">linkedin.com</li>
-                  </ul>
-                </li>
-                <li className="menu-item">
-                  <h4>My Account</h4>
-                  <ul className="sub-menu">
-                    <li className="menu-item">github.com</li>
-                    <li className="menu-item">linkedin.com</li>
-                  </ul>
-                </li>
-                <li className="menu-item">
-                  <h4>Resources</h4>
-                  <ul className="sub-menu">
-                    <li className="menu-item">github.com</li>
-                    <li className="menu-item">linkedin.com</li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
+              ))}
+            </ul>
           </div>
         </div>
-      );
+      </div>
+    );
   }
+}
+
+Footer.defaultProps = {
+  footerLinks: [],
 };
 
 Footer.propTypes = {
-  onLoadFooterLinks: PropTypes.func.isRequired
-}
+  onLoadFooterLinks: PropTypes.func.isRequired,
+  footerLinks: PropTypes.shape({}),
+};
+
+const mapStateToProps = state => ({
+  footerLinks: getFooterLinks(state),
+});
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-    onLoadFooterLinks
+  onLoadFooterLinks,
 }, dispatch);
 
-export default connect(null, mapDispatchToProps)(Footer);
+export default connect(mapStateToProps, mapDispatchToProps)(Footer);
