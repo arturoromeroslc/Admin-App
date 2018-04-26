@@ -13,9 +13,10 @@ import {
 export default function FooterReducer(state = {}, action) {
   switch (action.type) {
     case FOOTER_LOAD_LINKS_SUCCESS:
-      return Object.assign({}, state, {
-        footerLinks: footerData,
-      });
+      return {
+          ...state,
+          footerLinks: footerData
+      }
     default:
       return state;
   }
